@@ -1,6 +1,5 @@
 const UsuarioModel = require('../models/usuario.model');
 
-// GET /api/v1/usuarios/perfil
 const getPerfil = async (req, res) => {
   try {
     const data = await UsuarioModel.getById(req.usuario.id);
@@ -11,7 +10,6 @@ const getPerfil = async (req, res) => {
   }
 };
 
-// PUT /api/v1/usuarios/perfil
 const updatePerfil = async (req, res) => {
   try {
     const affected = await UsuarioModel.update(req.usuario.id, req.body);
